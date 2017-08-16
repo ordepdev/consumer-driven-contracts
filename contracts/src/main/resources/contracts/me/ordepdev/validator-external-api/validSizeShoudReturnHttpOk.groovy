@@ -10,7 +10,7 @@ Contract.make {
                 size: "SMALL"
         ])
         headers {
-            header("Content-Type", "application/json")
+            contentType(applicationJson())
         }
     }
     response {
@@ -19,7 +19,7 @@ Contract.make {
                 message: "Size is valid."
         ])
         headers {
-            header("Content-Type", value(consumer("application/json"), producer(regex("application/json.*"))))
+            contentType(applicationJson())
         }
     }
 }
